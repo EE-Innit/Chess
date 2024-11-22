@@ -54,7 +54,7 @@ while running:
             self.position = position
             self.sprite = sprite
 
-          def place(self, screen, square):
+          def spawn(self, screen, square):
             x, y = self.position # tuple
             screen.blit(self.type, (x * square, y * square))
 
@@ -64,7 +64,7 @@ while running:
     pawn = Piece(type = "pawn", colour = "white", position = (1, 2), \
                  sprite = image)
     
-    pawn.place(screen, x // 8)
+    pawn.spawn(screen, x // 8)
 
     ## PAWN
     # for pawn in range(8): # screen.blit(whitePawn, (0, y - len * 2))
